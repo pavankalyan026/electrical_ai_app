@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Electrical Engineer</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <img src="/static/logo.png">
+    <h2>AI Electrical Engineer</h2>
+    <p>Your personal electrical safety & SOP expert</p>
+  </div>
+
+  <form method="post">
+    <select name="language" required>
+      <option value="English">English</option>
+      <option value="Hindi">Hindi</option>
+      <option value="Telugu">Telugu</option>
+    </select>
+
+    <textarea name="question" placeholder="Ask your electrical question..." required></textarea>
+
+    <button type="submit">Ask Expert</button>
+  </form>
+
+  {% if answer %}
+  <div class="response">
+    {{ answer }}
+  </div>
+  {% endif %}
+</div>
+
+</body>
+</html>
